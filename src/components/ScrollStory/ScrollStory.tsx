@@ -17,65 +17,70 @@ interface StoryChapter {
 
 const chapters: StoryChapter[] = [
   {
-    id: 'software-engineer',
+    id: 'ai-engineering',
     number: '01',
+    category: 'Applied AI · LLM Systems',
+    title: 'AI Engineering',
+    description: 'Designing Generative AI pipelines for high-stakes domains: Claude and OpenAI models do the reading and drafting, deterministic code does everything that must be exact, and people make the decisions. Built Fortivance (AI third-party risk and incident response for Indian banks) and production GenAI pipelines for extraction, intent classification and automated responses.',
+    icon: Bot,
+    highlights: [
+      'Four-stage Claude Haiku / Sonnet pipeline with model routing',
+      'Structured extraction from contracts & notices',
+      'Citation validation & hallucination control',
+      'Prompt-injection defence on untrusted input',
+      'LLM evaluation against hand-labelled gold data',
+      'Cost-capped LLM gateway with token logging',
+      'Intent classification & automated response generation',
+      'Human-in-the-loop approval workflows'
+    ],
+    metrics: [
+      { label: 'Fortivance Extraction Accuracy', value: '94.7%' },
+      { label: 'Fortivance AI Pipeline', value: '4-Stage' },
+      { label: 'RBI Reporting Window', value: '6 hrs' },
+    ],
+    accentColor: 'from-purple-500/20 to-indigo-500/5 text-purple-400 border-purple-500/30',
+  },
+  {
+    id: 'software-engineer',
+    number: '02',
     category: 'Engineering Core',
     title: 'Software Engineer',
-    description: 'Building production software with Java, Spring Boot and Python. Specialized in robust domain architectures, OOP principles, and resilient backend microservices.',
+    description: 'Full-stack engineer building production software with Java, Spring Boot, Python and Django, React and Angular. Delivered secure banking APIs in the financial services domain, and led a team of 5 engineers across the Amcom, Solar and EV Charge platforms.',
     icon: Code2,
     highlights: [
       'Java & Spring Boot Microservices',
       'Python & Django Enterprise Backend',
-      'Clean Code & SOLID Architecture',
-      'REST & gRPC API Design'
+      'Secure Banking APIs with RBAC & Spring Security',
+      'React & Angular Frontends'
     ],
     codeSnippet: `@Service
 public class TelemetryStreamProcessor {
   @KafkaListener(topics = "iot-sensor-telemetry")
   public void processDeviceSignal(DevicePayload payload) {
-    // 1,400+ concurrent device stream handler
+    // 10,000+ device telemetry stream handler
   }
 }`,
     accentColor: 'from-amber-500/20 to-orange-500/5 text-amber-400 border-amber-500/30',
   },
   {
     id: 'distributed-systems',
-    number: '02',
+    number: '03',
     category: 'Distributed Scale',
     title: 'Kafka & Distributed Systems',
-    description: 'Engineered high-throughput real-time telemetry pipelines serving thousands of remote hardware endpoints with low latency.',
+    description: 'Engineered high-throughput real-time telemetry pipelines over Kafka, MQTT and Redis serving 10,000+ remote solar inverters and EV chargers.',
     icon: Cpu,
     highlights: [
       'Real-time telemetry streaming pipelines',
-      'Kafka Connect & Broker cluster management',
+      'Kafka Connect, MQTT & ETL pipelines',
       'High performance Redis caching layers',
-      'Distributed event processing'
+      'SQL query time cut 90% via normalization & indexing'
     ],
     metrics: [
-      { label: 'Connected Devices', value: '1,400+' },
-      { label: 'API Requests / Day', value: '200K+' },
-      { label: 'Pipeline Uptime', value: '99.99%' },
+      { label: 'Connected Devices', value: '10,000+' },
+      { label: 'API Requests / Day', value: '10M+' },
+      { label: 'Platform Uptime', value: '99.9%' },
     ],
     accentColor: 'from-cyan-500/20 to-blue-500/5 text-cyan-400 border-cyan-500/30',
-  },
-  {
-    id: 'ai-engineering',
-    number: '03',
-    category: 'Intelligent Automation',
-    title: 'AI Engineering',
-    description: 'Bridging enterprise messaging platforms with state-of-the-art LLMs to automate complex customer workflows and natural language interactions.',
-    icon: Bot,
-    highlights: [
-      'WhatsApp Business API Integration',
-      'OpenAI GPT-4 Function Calling & Embeddings',
-      'Automated Conversational Workflows',
-      'AI-powered document & payload analysis'
-    ],
-    metrics: [
-      { label: 'Response Latency', value: '< 800ms' },
-      { label: 'Automated Resolution', value: '88%' },
-    ],
-    accentColor: 'from-purple-500/20 to-indigo-500/5 text-purple-400 border-purple-500/30',
   },
   {
     id: 'cloud-infrastructure',
@@ -86,13 +91,13 @@ public class TelemetryStreamProcessor {
     icon: Cloud,
     highlights: [
       'Docker Containerization & Multi-stage builds',
-      'AWS EC2, S3, RDS, & IAM Security',
+      'AWS EC2, S3 & Lambda',
       'Kubernetes Deployment & Auto-scaling',
-      'Automated CI/CD GitHub Actions'
+      'CI/CD with Jenkins & GitHub Actions'
     ],
     metrics: [
-      { label: 'Deployment Time', value: '< 3 mins' },
-      { label: 'Zero-Downtime Releases', value: '100%' },
+      { label: 'EV Charging Platform', value: 'OCPI' },
+      { label: 'Platform Uptime', value: '99.9%' },
     ],
     accentColor: 'from-blue-500/20 to-sky-500/5 text-blue-400 border-blue-500/30',
   },
@@ -100,14 +105,14 @@ public class TelemetryStreamProcessor {
     id: 'scale-mission',
     number: '05',
     category: 'Engineering Philosophy',
-    title: 'I build software that scales.',
-    description: 'Every system is architected for reliability, modular expansion, and effortless maintainability under high concurrent load.',
+    title: 'I build AI that is safe to ship.',
+    description: 'Every system pairs model intelligence with verifiable, testable engineering: measured, explainable, and architected for reliability under real production load.',
     icon: Zap,
     highlights: [
-      'Resilient fault-tolerant architectures',
-      'Performance benchmarking & profiling',
-      'Distributed telemetry & observability',
-      'Production-grade reliability'
+      'AI where language must be read or written',
+      'Code where answers must be exact',
+      'Humans where decisions carry accountability',
+      'Production-grade reliability & observability'
     ],
     accentColor: 'from-emerald-500/20 to-teal-500/5 text-emerald-400 border-emerald-500/30',
   },
@@ -137,10 +142,10 @@ export const ScrollStory: React.FC = () => {
             <span>CAREER & ARCHITECTURAL JOURNEY</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-            How I Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-indigo">Scalable Systems</span>
+            How I Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-indigo">AI-Powered Systems</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl">
-            A scrollytelling walkthrough of core engineering domains, high-throughput pipelines, AI integrations, and cloud orchestration.
+            A walkthrough of applied LLM engineering, the backend foundations underneath it, high-throughput pipelines, and cloud orchestration.
           </p>
         </div>
 
@@ -227,9 +232,9 @@ export const ScrollStory: React.FC = () => {
                     ) : (
                       <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-accent-blue/10 via-accent-cyan/5 to-transparent border border-white/10 text-center space-y-3 sm:space-y-4">
                         <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-accent-cyan mx-auto animate-bounce" />
-                        <h4 className="text-lg sm:text-xl font-bold text-white">Built for High Concurrency</h4>
+                        <h4 className="text-lg sm:text-xl font-bold text-white">AI Drafts. People Decide.</h4>
                         <p className="text-xs text-slate-400 font-mono">
-                          Zero bottlenecks. Distributed caching. Fault-tolerant failovers.
+                          Evaluated outputs. Validated citations. Fault-tolerant backends.
                         </p>
                       </div>
                     )}

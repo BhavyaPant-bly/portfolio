@@ -4,37 +4,58 @@ import { Server, Layout, Cloud, ShieldCheck, MessageSquare, Cpu, Sparkles } from
 
 interface SkillItem {
   name: string;
-  category: 'Backend' | 'Frontend' | 'Cloud' | 'DevOps' | 'Messaging' | 'AI';
+  category: 'Backend' | 'Frontend' | 'Cloud' | 'DevOps' | 'Messaging' | 'AI' | 'Security';
   experience: string;
   application: string;
   highlightBadge?: string;
 }
 
 const skillsData: SkillItem[] = [
+  // AI & LLM Engineering
+  { name: 'Claude (Haiku, Sonnet)', category: 'AI', experience: 'Advanced', application: 'Four-stage Fortivance pipeline: extraction, evidence mapping & response plans', highlightBadge: '94.7% Extraction Acc.' },
+  { name: 'Generative AI Pipelines', category: 'AI', experience: 'Production', application: 'Information extraction, intent classification & automated responses', highlightBadge: 'Production' },
+  { name: 'Prompt Engineering & Model Routing', category: 'AI', experience: 'Advanced', application: 'Routing tasks between Haiku and Sonnet by cost and complexity' },
+  { name: 'OpenAI API', category: 'AI', experience: 'Advanced', application: 'Intent classification & reply generation (Amcom, Visa RMS)' },
+  { name: 'AI Evaluation', category: 'AI', experience: 'Advanced', application: 'Hand-labelled gold-data benchmarks for extraction accuracy & citations' },
+  { name: 'Structured Outputs', category: 'AI', experience: 'Production', application: 'Schema-enforced extraction from contracts, notices & messages' },
+  { name: 'AI Security Controls', category: 'AI', experience: 'Production', application: 'Input validation, citation checks & human-in-the-loop approval' },
+  { name: 'Cost-Capped LLM Gateway', category: 'AI', experience: 'Advanced', application: 'Result caching, per-call token logging & daily spend caps' },
+  { name: 'GitHub Copilot', category: 'AI', experience: 'Advanced', application: 'AI-assisted development across backend & API work' },
+  { name: 'WhatsApp Business API', category: 'AI', experience: 'Advanced', application: 'Automated Conversational Workflows' },
+  { name: 'AI Workflows', category: 'AI', experience: 'Advanced', application: 'NLP Ingestion & Context Memory Retention' },
+
   // Backend
   { name: 'Java', category: 'Backend', experience: 'Production Lead', application: 'Spring Boot Microservices & Enterprise OOP', highlightBadge: 'Core Expertise' },
   { name: 'Spring Boot', category: 'Backend', experience: 'Production Lead', application: 'REST APIs, Data Connectors, Security & Telemetry Ingest', highlightBadge: 'Production Core' },
   { name: 'Python', category: 'Backend', experience: 'Advanced', application: 'Django APIs, AI Automation & Scripting' },
+  { name: 'Spring WebFlux', category: 'Backend', experience: 'Advanced', application: 'Reactive, non-blocking APIs' },
   { name: 'Django', category: 'Backend', experience: 'Advanced', application: 'REST Framework, ORM & Backend Services' },
-  { name: 'SQL & Relational DBs', category: 'Backend', experience: 'Advanced', application: 'PostgreSQL, MySQL, Query Optimization & Indexing' },
+  { name: 'SQL & Relational DBs', category: 'Backend', experience: 'Advanced', application: 'MySQL schema design, normalization & indexing', highlightBadge: '−90% Query Time' },
+  { name: 'MongoDB', category: 'Backend', experience: 'Advanced', application: 'Document storage for device & application data' },
   { name: 'Redis', category: 'Backend', experience: 'Advanced', application: 'In-Memory Cache, Session Storage & Rate Limiting' },
 
   // Messaging & Telemetry
-  { name: 'Apache Kafka', category: 'Messaging', experience: 'Production Lead', application: '1,400+ IoT Telemetry Pipeline & Event Streaming', highlightBadge: '1,400+ IoT Devices' },
+  { name: 'Apache Kafka', category: 'Messaging', experience: 'Production Lead', application: '10,000+ Device Telemetry Pipeline & Event Streaming', highlightBadge: '10,000+ IoT Devices' },
+  { name: 'MQTT', category: 'Messaging', experience: 'Production', application: 'Device-to-cloud telemetry for solar inverters & EV chargers' },
   { name: 'Kafka Connect', category: 'Messaging', experience: 'Advanced', application: 'Source/Sink Connectors & Stream Processing' },
-  { name: 'Real-time Telemetry', category: 'Messaging', experience: 'Production Lead', application: '200K+ Daily Request Stream & State Management', highlightBadge: '200K+ Req/Day' },
-
-  // AI & Automation
-  { name: 'OpenAI API', category: 'AI', experience: 'Advanced', application: 'Function Calling, GPT-4 Integrations & Embeddings', highlightBadge: 'WhatsApp Multi-Agent' },
-  { name: 'WhatsApp Business API', category: 'AI', experience: 'Advanced', application: 'Automated Conversational Workflows' },
-  { name: 'AI Workflows', category: 'AI', experience: 'Advanced', application: 'NLP Ingestion & Context Memory Retention' },
+  { name: 'Real-time Telemetry', category: 'Messaging', experience: 'Production Lead', application: '10M+ Daily Requests at 99.9% Uptime', highlightBadge: '10M+ Req/Day' },
+  { name: 'Snowflake & Databricks', category: 'Messaging', experience: 'Working Knowledge', application: 'Data engineering & ETL workloads' },
+  { name: 'ETL Pipelines', category: 'Messaging', experience: 'Production', application: 'Enterprise data integration & data-quality workflows' },
 
   // Cloud & DevOps
-  { name: 'AWS (EC2, S3, RDS)', category: 'Cloud', experience: 'Advanced', application: 'Scalable Cloud Hosting & Infrastructure' },
+  { name: 'AWS (EC2, S3, Lambda)', category: 'Cloud', experience: 'Advanced', application: 'Scalable Cloud Hosting & OCPI EV Charging Platform' },
   { name: 'Docker', category: 'DevOps', experience: 'Advanced', application: 'Multi-stage Containerization & Microservice Packaging' },
   { name: 'Kubernetes', category: 'DevOps', experience: 'Advanced', application: 'Cluster Deployment, Services & Auto-scaling' },
   { name: 'Linux Administration', category: 'DevOps', experience: 'Advanced', application: 'Bash Shell Scripting & Server Tuning' },
-  { name: 'CI/CD Pipelines', category: 'DevOps', experience: 'Advanced', application: 'GitHub Actions Automated Testing & Build Deployment' },
+  { name: 'CI/CD Pipelines', category: 'DevOps', experience: 'Advanced', application: 'Jenkins & GitHub Actions Testing and Deployment' },
+  { name: 'Nginx', category: 'DevOps', experience: 'Advanced', application: 'Reverse proxy & service routing' },
+
+  // Banking & Cybersecurity
+  { name: 'Third-Party Risk Management', category: 'Security', experience: 'Advanced', application: 'Vendor dependency mapping & RBI outsourcing requirements (Fortivance)', highlightBadge: 'Banking' },
+  { name: 'Incident Response', category: 'Security', experience: 'Advanced', application: 'Impact tracing within the RBI 6-hour reporting window' },
+  { name: 'RBAC & Access Control', category: 'Security', experience: 'Production', application: 'Role & organization-level access for secure banking APIs' },
+  { name: 'Prompt-Injection Defence', category: 'Security', experience: 'Advanced', application: 'Treating uploaded documents as untrusted input' },
+  { name: 'SOC 2 Evidence Mapping', category: 'Security', experience: 'Advanced', application: 'Mapping audit reports & contracts to regulatory requirements' },
 
   // Frontend
   { name: 'React', category: 'Frontend', experience: 'Advanced', application: 'Component Architecture & State Management' },
@@ -43,7 +64,7 @@ const skillsData: SkillItem[] = [
   { name: 'Tailwind CSS', category: 'Frontend', experience: 'Advanced', application: 'Glassmorphic Modern UI Systems' },
 ];
 
-const categories = ['All', 'Backend', 'Messaging', 'AI', 'Cloud', 'DevOps', 'Frontend'] as const;
+const categories = ['All', 'AI', 'Security', 'Backend', 'Messaging', 'Cloud', 'DevOps', 'Frontend'] as const;
 
 export const SkillsVisualization: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -71,7 +92,7 @@ export const SkillsVisualization: React.FC = () => {
           </div>
 
           <p className="text-slate-400 text-xs sm:text-sm font-mono max-w-sm">
-            Categorized overview of backend frameworks, message brokers, AI engines, and cloud tools.
+            Categorized overview of GenAI tooling, banking security, backend frameworks, data pipelines, and cloud tools.
           </p>
         </div>
 

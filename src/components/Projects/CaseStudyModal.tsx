@@ -12,9 +12,10 @@ export interface ProjectData {
   overview: string;
   challenges: string[];
   solutions: string[];
-  diagramComponent: React.ReactNode;
+  diagramComponent?: React.ReactNode;
   githubUrl?: string;
   liveUrl?: string;
+  featured?: boolean;
 }
 
 interface CaseStudyModalProps {
@@ -121,12 +122,14 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
                   {project.overview}
                 </p>
                 {/* Live Animated Diagram */}
+                {project.diagramComponent && (
                 <div>
                   <h4 className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">
                     Interactive Architectural Flow
                   </h4>
                   {project.diagramComponent}
                 </div>
+                )}
               </div>
             )}
 
@@ -186,12 +189,24 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose
             <div className="text-[11px] sm:text-xs font-mono text-slate-400">
               Architected by Bhavya Pant
             </div>
-            <button
-              onClick={onClose}
-              className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-xs transition-colors"
-            >
-              Close Case Study
-            </button>
+            <div className="flex items-center gap-2">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-indigo text-dark-950 font-bold text-xs transition-transform hover:scale-[1.02]"
+                >
+                  Visit Live <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
+              <button
+                onClick={onClose}
+                className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-xs transition-colors"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

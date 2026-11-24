@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact, onDownloadResume 
               <span className="text-xl font-bold text-white tracking-tight">Bhavya Pant</span>
             </div>
             <p className="text-slate-400 text-sm font-light leading-relaxed max-w-md">
-              Senior Software Engineer building high-throughput Kafka pipelines, Java microservices, AI integrations, and cloud infrastructure.
+              Full-Stack & AI Software Engineer building Generative AI pipelines, secure banking APIs, high-throughput Kafka systems, and cloud infrastructure.
             </p>
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-xs font-mono text-slate-400">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10">

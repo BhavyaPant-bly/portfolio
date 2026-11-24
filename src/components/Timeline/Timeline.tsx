@@ -16,32 +16,36 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     company: 'Electrowaves Electronics',
-    role: 'Software Developer',
-    period: 'Jan 2025 — Present',
+    role: 'Software Engineer',
+    period: 'Jan 2025 — Oct 2026',
     location: 'Panchkula, Haryana',
     type: 'Full-Time',
-    metricsBadge: '1,400+ IoT Devices Telemetry Pipeline',
+    metricsBadge: '10M+ Req/Day · 10,000+ Devices · 99.9% Uptime',
     highlights: [
-      'Built production microservices using Java, Spring Boot, Hibernate, and MySQL, delivering secure REST APIs with Spring Security, JWT, and OAuth 2.0.',
-      'Built telemetry ingestion pipelines using Kafka and Redis, streaming data from 1,400+ IoT devices (900+ solar inverters, 500+ EV chargers) at 200K+ API requests/day.',
-      'Resolved production issues spanning API failures, telemetry sync, timezone inconsistencies, and JVM/GC tuning to improve platform uptime.',
-      'Containerized services using Docker and Kubernetes, configured Nginx, and automated CI/CD via GitHub Actions on Linux.'
+      'Built telemetry pipelines for 10,000+ devices, handling 10M+ API requests/day with 99.9% uptime using Kafka, MQTT, and Redis.',
+      'Developed Generative AI pipelines for information extraction, intent classification, and automated response generation.',
+      'Implemented AI security controls through structured outputs, input validation, and human-in-the-loop approval.',
+      'Led a team of 5 engineers across the Amcom, Solar and EV Charge platforms.',
+      'Built an OCPI-based EV charging platform using AWS, Docker, and Kubernetes.',
+      'Reduced SQL query execution time by 90% through normalization and indexing.'
     ],
-    techStack: ['Java', 'Spring Boot', 'Kafka', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'MySQL', 'Nginx'],
+    techStack: ['Java', 'Spring Boot', 'Python', 'Kafka', 'MQTT', 'Redis', 'Generative AI', 'OCPI', 'Docker', 'Kubernetes', 'AWS'],
   },
   {
-    company: 'CodeInsight Technologies',
-    role: 'Software Engineering Intern → Software Developer',
+    company: 'Codeinsight Technologies',
+    role: 'Software Engineer (promoted from Intern)',
     period: 'Jan 2024 — Jan 2025',
     location: 'Mohali, Punjab',
     type: 'Full-Time',
+    metricsBadge: 'Banking & Financial Services',
     highlights: [
-      'Promoted from Software Engineering Intern to Software Developer within 6 months based on technical performance and delivery impact.',
-      'Developed backend services using Java, Spring Boot, Hibernate, and SQL alongside responsive Angular applications, delivering 40+ production features.',
-      'Optimized SQL database queries and schemas for high-speed data retrieval across core business workflows.',
-      'Built automated regression test suites using Robot Framework, contributing to CI/CD and Agile workflows.'
+      'Promoted from Intern to Software Engineer within 6 months.',
+      'Developed enterprise applications in the Banking and Financial Services domain, implementing secure banking APIs.',
+      'Implemented cybersecurity controls including RBAC, organization-level access control, and database validation.',
+      'Designed relational database schemas, ETL pipelines, and REST APIs for enterprise data integration.',
+      'Automated reporting, testing, and data-quality workflows, reducing manual effort.'
     ],
-    techStack: ['Java', 'Spring Boot', 'Angular', 'SQL', 'Hibernate', 'Robot Framework', 'REST APIs'],
+    techStack: ['Java', 'Spring Boot', 'Python', 'Angular', 'SQL', 'ETL', 'RBAC', 'Robot Framework', 'REST APIs'],
   },
 ];
 
@@ -62,7 +66,7 @@ export const Timeline: React.FC = () => {
             Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-accent-blue to-accent-indigo">Experience</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base font-light max-w-2xl">
-            Building production systems, Kafka pipelines, microservices, and cloud-native backends in enterprise settings.
+            Generative AI pipelines, banking-grade APIs, and high-throughput telemetry systems built in production.
           </p>
         </div>
 

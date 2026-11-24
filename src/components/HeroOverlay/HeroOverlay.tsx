@@ -16,7 +16,7 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
   // Determine current subtitle stage based on scrollProgress
   // Stage 0: 0% - 20% (Initial Page Load View)
   // Stage 1: 20% - 40% (Scalable Backend Systems & Java / Kafka)
-  // Stage 2: 40% - 60% (Production Scale Metrics: 1400+ IoT / 200K+ Req)
+  // Stage 2: 40% - 60% (Production Scale Metrics: 10,000+ IoT / 10M+ Req)
   // Stage 3: 60% - 80% (AI & Cloud Infrastructure)
   // Stage 4: 80% - 100% (Climax & Final Action CTA)
 
@@ -32,8 +32,8 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
 
   // Counter calculation for Stage 2 (40-60%)
   const stage2Progress = Math.max(0, Math.min(1, (scrollProgress - 0.40) / 0.20));
-  const deviceCounter = Math.floor(stage2Progress * 1400);
-  const reqCounter = Math.floor(stage2Progress * 200);
+  const deviceCounter = Math.floor(stage2Progress * 10000);
+  const reqCounter = Math.floor(stage2Progress * 10);
 
   const scrollToProjects = () => {
     const el = document.getElementById('scroll-story');
@@ -71,7 +71,7 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
             <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-cyan" />
           </span>
           <span className="text-[11px] sm:text-xs font-mono text-slate-300 font-medium tracking-wide truncate">
-            Available for Senior Backend & Engineering Roles
+            Available for AI Engineering & Backend Roles
           </span>
         </div>
       </div>
@@ -101,10 +101,10 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
               >
                 <div className="space-y-1.5 sm:space-y-2">
                   <p className="text-lg sm:text-2xl text-accent-cyan font-mono font-semibold">
-                    Software Engineer
+                    Full-Stack & AI Software Engineer
                   </p>
                   <p className="text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-xl">
-                    Building scalable backend systems, AI-powered products & distributed infrastructure.
+                    2.7+ years building Generative AI pipelines, secure banking APIs & distributed systems at scale.
                   </p>
                 </div>
 
@@ -151,7 +151,7 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
                   Building scalable backend systems.
                 </p>
                 <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-1">
-                  {['Java', 'Spring Boot', 'Kafka'].map((tech) => (
+                  {['Java', 'Spring Boot', 'Python', 'Django', 'Kafka'].map((tech) => (
                     <span
                       key={tech}
                       className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white/5 border border-white/10 text-accent-cyan font-mono text-xs sm:text-sm font-semibold backdrop-blur-md"
@@ -185,7 +185,7 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
                   </div>
                   <div className="p-3.5 sm:p-4 rounded-xl bg-dark-900/90 border border-white/10 space-y-1">
                     <div className="text-2xl sm:text-3xl font-mono font-bold text-accent-indigo">
-                      {reqCounter}K+
+                      {reqCounter}M+
                     </div>
                     <div className="text-xs font-mono text-slate-400">API Requests / Day</div>
                   </div>
@@ -204,10 +204,10 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
                 className="space-y-4"
               >
                 <p className="text-xl sm:text-3xl text-slate-200 font-bold tracking-tight">
-                  Building AI & Distributed Systems.
+                  Shipping AI products that people can trust.
                 </p>
                 <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-1">
-                  {['Kafka', 'Docker', 'AWS', 'Kubernetes'].map((tech) => (
+                  {['Claude API', 'OpenAI API', 'Model Routing', 'AI Evaluation', 'Prompt-Injection Defence', 'AWS'].map((tech) => (
                     <span
                       key={tech}
                       className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white/5 border border-white/10 text-purple-300 font-mono text-xs sm:text-sm font-semibold backdrop-blur-md"
@@ -272,9 +272,11 @@ export const HeroOverlay: React.FC<HeroOverlayProps> = ({
           <span className="text-[10px] sm:text-xs">SCROLL TO EXPLORE ARCHITECTURE</span>
         </div>
         <div className="hidden sm:flex items-center gap-4 text-slate-400">
-          <span>Java</span>
+          <span>LLMs</span>
           <span>•</span>
-          <span>Spring Boot</span>
+          <span>Claude</span>
+          <span>•</span>
+          <span>Java</span>
           <span>•</span>
           <span>Kafka</span>
           <span>•</span>

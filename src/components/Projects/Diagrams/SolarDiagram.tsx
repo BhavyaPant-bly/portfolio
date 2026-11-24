@@ -9,10 +9,10 @@ export const SolarDiagram: React.FC = () => {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-3 sm:pb-4 mb-4 sm:mb-6 border-b border-white/10">
         <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono text-cyan-400">
           <Activity className="w-3.5 h-3.5 animate-pulse shrink-0" />
-          <span>PYRAMID SOLAR: 1,400+ IOT TELEMETRY PIPELINE</span>
+          <span>SOLAR & EV: 10,000+ DEVICE TELEMETRY PIPELINE</span>
         </div>
         <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-          200K+ REQ/DAY STREAM
+          10M+ REQ/DAY STREAM
         </span>
       </div>
 
@@ -26,7 +26,7 @@ export const SolarDiagram: React.FC = () => {
           <div className="flex items-center justify-between">
             <Radio className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
             <span className="text-[10px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">
-              1,400+ Devices
+              10,000+ Devices
             </span>
           </div>
           <div>
@@ -103,10 +103,10 @@ export const SolarDiagram: React.FC = () => {
       <div className="mt-4 sm:mt-6 p-3 rounded-xl bg-white/5 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 text-xs font-mono">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping shrink-0" />
-          <span className="text-slate-300 text-[11px] sm:text-xs">Active Packet Rate:</span>
-          <span className="text-emerald-400 font-bold text-[11px] sm:text-xs">2,310 msgs / sec</span>
+          <span className="text-slate-300 text-[11px] sm:text-xs">Daily Throughput:</span>
+          <span className="text-emerald-400 font-bold text-[11px] sm:text-xs">10M+ requests / day</span>
         </div>
-        <div className="text-slate-400 text-[10px] sm:text-[11px]">99.99% Availability</div>
+        <div className="text-slate-400 text-[10px] sm:text-[11px]">99.9% Uptime</div>
       </div>
     </div>
   );

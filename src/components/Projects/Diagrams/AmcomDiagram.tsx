@@ -88,7 +88,7 @@ export const AmcomDiagram: React.FC = () => {
       {/* Legend & Stats */}
       <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 text-[10px] sm:text-[11px] font-mono text-slate-400">
         <div>Protocol: HTTPS / WebSockets / Kafka Consumer</div>
-        <div className="text-accent-cyan">Avg End-to-End Latency: &lt; 800ms</div>
+        <div className="text-accent-cyan">Structured outputs · Human-in-the-loop approval</div>
       </div>
     </div>
   );
